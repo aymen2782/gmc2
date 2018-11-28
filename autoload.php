@@ -10,7 +10,9 @@ function load($classe){
     $paths = array(
         '',
         'classes/',
-        'Model/'
+        'Model/',
+        '../classes/',
+        '../Model/',
     );
 
     foreach ($paths as $path) {

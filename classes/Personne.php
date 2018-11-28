@@ -106,5 +106,16 @@ class Personne
         return $respone->fetch(PDO::FETCH_OBJ);
     }
 
+    public function deletePersonne($cin) {
+
+        $query = " delete from personne where cin=:cin";
+        $respone = $this->bd->prepare($query);
+        $respone->execute(
+            array(
+                'cin'=> $cin
+            )
+        );
+    }
+
 
 }
